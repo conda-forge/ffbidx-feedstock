@@ -1,22 +1,25 @@
-{% set version = "1.1.3" %}
+context:
+  version: "1.1.3"
 
 package:
   name: ffbidx
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/paulscherrerinstitute/fast-feedback-indexer/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/paulscherrerinstitute/fast-feedback-indexer/archive/refs/tags/v${{ version }}.tar.gz
   sha256: a71db9e076630f409b7329b85ee70870d124f3008de32f60da561bf3955bcc3b
 
 build:
   number: 1
-  skip: True  # [not linux64 or cuda_compiler_version in (None, "None", "11.8")]
+  skip:
+    - not linux64
+    - cuda_compiler_version in (None, "None", "11.8")
 
 requirements:
   build:
-    - {{ compiler('cuda') }}
-    - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('cuda') }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
     - meson
     - pkg-config
   host:
@@ -26,16 +29,13 @@ requirements:
   run:
     - python
 
-test:
-  requires:
-    - pip
-  commands:
-    - pip check
-  imports:
-    - ffbidx
+tests:
+  - python:
+    imports:
+      - ffbidx
 
 about:
-  home: https://github.com/paulscherrerinstitute/fast-feedback-indexer
+  repository: https://github.com/paulscherrerinstitute/fast-feedback-indexer
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
