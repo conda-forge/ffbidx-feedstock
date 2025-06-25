@@ -35,6 +35,7 @@ tests:
       - ffbidx
 
 about:
+  homepage: https://github.com/paulscherrerinstitute/fast-feedback-indexer
   repository: https://github.com/paulscherrerinstitute/fast-feedback-indexer
   license: BSD-3-Clause
   license_family: BSD
