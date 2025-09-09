@@ -35,15 +35,11 @@ tests:
       imports:
         - ffbidx
       pip_check: true
-      requires:
-        - pip
-  - script:
-      - pip check
+
 about:
   homepage: https://github.com/paulscherrerinstitute/fast-feedback-indexer
   license: BSD-3-Clause
   license_file: LICENSE.md
-  license_url: https://github.com/paulscherrerinstitute/fast-feedback-indexer/LICENSE.md
   summary: Fast feedback indexer library with python module for xray crystallography
   description: |
     Fast feedback indexer library with the python module for xray crystallography.
