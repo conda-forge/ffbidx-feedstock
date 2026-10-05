@@ -10,7 +10,7 @@ Package license: [BSD-3-Clause](https://github.com/paulscherrerinstitute/fast-fe
 Summary: Fast feedback indexer library with python module for xray crystallography
 
 Fast feedback indexer library with the python module for xray crystallography.
-Paper reference: https://doi.org/10.1107/S1600576724003182
+Paper reference: https://doi.org/10.1107/S1600576724003182 (algorithm), https://doi.org/10.1107/S1600576726008083 (implementation)
 Code repository: https://github.com/paulscherrerinstitute/fast-feedback-indexer
 dev_url: https://github.com/paulscherrerinstitute/fast-feedback-indexer
 doc_url: https://github.com/paulscherrerinstitute/fast-feedback-indexer/blob/main/python/README.md
