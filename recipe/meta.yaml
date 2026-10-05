@@ -9,7 +9,7 @@ source:
   sha256: a71db9e076630f409b7329b85ee70870d124f3008de32f60da561bf3955bcc3b
 
 build:
-  number: 5
+  number: 6
   skip: True  # [not linux or (not x86_64 and not aarch64) or cuda_compiler_version in (None, "None", "11.8")]
 
 requirements:
@@ -44,7 +44,7 @@ about:
   summary: "Fast feedback indexer library with python module for xray crystallography"
   description: |
     Fast feedback indexer library with the python module for xray crystallography.
-    Paper reference: https://doi.org/10.1107/S1600576724003182
+    Paper reference: https://doi.org/10.1107/S1600576724003182 (algorithm), https://doi.org/10.1107/S1600576726008083 (implementation)
     Code repository: https://github.com/paulscherrerinstitute/fast-feedback-indexer
     dev_url: https://github.com/paulscherrerinstitute/fast-feedback-indexer
     doc_url: https://github.com/paulscherrerinstitute/fast-feedback-indexer/blob/main/python/README.md
